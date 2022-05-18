@@ -53,4 +53,9 @@ public class PlayerMovement : MonoBehaviour
     {
         rigidbody.AddForce(moveDirection.normalized * moveSpeed * movementMultiplier, ForceMode.Acceleration);
     }
+
+    void OnCollisionEnter(Collision other)
+    {
+        Debug.Log("Detected");
+    }
 }
